@@ -145,7 +145,7 @@ used to modify the underlying data. (Since iterators are a generalization of the
 
    **vec.push_back( 8 );**
  
-**for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end(); itr != end;++itr ){** // just print out the values...
+**for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end(); itr != end;++itr )**  **{** // just print out the values...
         
    std::cout<< *itr <<std::endl;
 
@@ -212,9 +212,9 @@ The bitwise AND operator (&) compares each bit of the first operand to that bit 
 
 
 
-   *If you can take the address of an expression, the expression is an lvalue.*
+   >*If you can take the address of an expression, the expression is an lvalue.*
 
-   *If the type of an expression is an lvalue reference (e.g., T& or const T&, etc.), that expression is an lvalue. Otherwise, the expression is an rvalue.  Conceptually (and typically also in fact), rvalues correspond to temporary objects, such as those returned from functions or created through implicit type conversions. Most literal values (e.g., 10 and 5.3) are also rvalues.*
+   >*If the type of an expression is an lvalue reference (e.g., T& or const T&, etc.), that expression is an lvalue. Otherwise, the expression is an rvalue.  Conceptually (and >typically also in fact), rvalues correspond to temporary objects, such as those returned from functions or created through implicit type conversions. Most literal values (e.g., >10 and 5.3) are also rvalues.*
 
 
 	1.template<typename T>
