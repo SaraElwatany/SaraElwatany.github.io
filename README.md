@@ -137,7 +137,7 @@ when an STL collection is declared const, then any iterators used over the colle
 must be const iterators. They're just like normal iterators, except that they cannot be
 used to modify the underlying data. (Since iterators are a generalization of the idea of pointers).
 
-**std::vector<int>vec;**
+  std::vector<int>vec;
 
    **vec.push_back( 3 );**
 
