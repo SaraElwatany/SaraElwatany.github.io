@@ -5,7 +5,7 @@
 
 # 1.Const:
 
-#### 1.1.The const keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it.
+### 1.1.The const keyword specifies that a variable's value is constant and tells the compiler to prevent the programmer from modifying it.
 
 **int const x = 5;**
 
@@ -15,7 +15,7 @@ or
 
 
 
-#### 1.2.You can also use it to modify the size of the array.
+### 1.2.You can also use it to modify the size of the array.
 
 **const int maxarray = 255;**
 
@@ -25,7 +25,7 @@ or
 
 
 
-#### 1.3.In pointer declarations.
+### 1.3.In pointer declarations.
 
 *We cannot change the pointer.
 
@@ -55,15 +55,13 @@ or
 
 
 
-#### 1.4.const member functions
+### 1.4.const member functions
 Declaring a member function with the const keyword specifies that the function is a
 "read-only" function. The const keyword is required in both the declaration and the
  definition. const objects can only access const functions, while const functions can be called
  by both const and not const objects.
 
-**class Date**
-
-**{**
+**class Date {**
 
 **public:**
    
@@ -75,29 +73,19 @@ Declaring a member function with the const keyword specifies that the function i
 
 **private:**
   
-  **int month;**
-
-**};**
+  **int month;  };**
 
 **int Date::getMonth() const**
 
 **{**
   
-  **return month;**        // Doesn't modify anything
+  **return month;**        // Doesn't modify anything   **}**
 
-**}**
-
-**void Date::setMonth( int mn )**
-
-**{**
+**void Date::setMonth( int mn ) {**
   
-  **month = mn;**          // Modifies data member
+  **month = mn;**          // Modifies data member  **}**
 
-**}**
-
-**int main()**
-
-**{**
+**int main() {**
   
   **Date MyDate( 7, 4, 1998 );**
   
@@ -107,9 +95,7 @@ Declaring a member function with the const keyword specifies that the function i
   
   **BirthDate.getMonth();**    // Okay
    
-   **BirthDate.setMonth( 4 );** // C2662 Error
-
-**}**
+   **BirthDate.setMonth( 4 );** // C2662 Error  **}**
 
 
 
@@ -117,7 +103,7 @@ Declaring a member function with the const keyword specifies that the function i
 
 
 
-#### 1.5.For const return type and const parameter: 
+### 1.5.For const return type and const parameter: 
 
 **#include <iostream>**
 
@@ -131,13 +117,10 @@ Declaring a member function with the const keyword specifies that the function i
     
    // be change
     
-   **return y;**
-
-   **}**
+   **return y;  }**
  
-// Driver code
 
-   **int main() {**
+   **int main() {**    // Driver code
    
    **int x = 9;**
     
@@ -153,7 +136,7 @@ Declaring a member function with the const keyword specifies that the function i
 
    
 
-#### 1.6.Const iterators
+### 1.6.Const iterators
 Since iterators can also be used to modify the underlying collection.
 when an STL collection is declared const, then any iterators used over the collection 
 must be const iterators. They're just like normal iterators, except that they cannot be
@@ -177,7 +160,7 @@ used to modify the underlying data. (Since iterators are a generalization of the
 
 
 
-#### 1.7.Const cast
+### 1.7.Const cast
 
 Sometimes, you have a const variable and you want to pass it into a function that you are certain won't modify it. But that function doesn't declare its argument as const.
 Fortunately, if you know that you are safe in passing a const variable into a function that doesn't explicitly indicate that it will not change the data, then you can use a **const_cast** in order to temporarily strip away the const-ness of the object.
@@ -186,15 +169,16 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 // a bad version of strlen that doesn't declare its argument const
 
    **int bad_strlen (char *x) {**
-        **strlen( x );**
-**}**
+        **strlen( x ); }**
  
 // note that the extra const is actually implicit in this declaration since
 // string literals are constant
-**const char *x = "abc";**
+
+	**const char *x = "abc";**
  
 // cast away const-ness for our strlen function 
-**bad_strlen( const_cast<char *>(x) );**
+
+	**bad_strlen( const_cast<char *>(x) );**
 
 
 
@@ -207,7 +191,7 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 
 # 2.&:
 
-#### 2.1.Bitwise AND
+### 2.1.Bitwise AND
 The bitwise AND operator (&) compares each bit of the first operand to that bit of the second operand. If both bits are 1, the bit is set to 1. Otherwise, the bit is set to 0. Both operands to the bitwise **AND** operator must be of integral types. 
  
 **int main() {**  
@@ -219,12 +203,12 @@ The bitwise AND operator (&) compares each bit of the first operand to that bit 
    **cout << hex << ( a & b ) << endl;  }**
 
 
-#### 2.2.&& OPERATOR (and)
+### 2.2.&& OPERATOR (and)
 
    **( (5 == 5) && (3 > 6) )**  // evaluates to false ( true && false )
 
 
-#### 2.3.&&to declare a universal reference 
+### 2.3.&&to declare a universal reference 
 
    -If the expression initializing a universal reference is an lvalue, the universal reference becomes an lvalue reference.
 
@@ -266,7 +250,7 @@ The bitwise AND operator (&) compares each bit of the first operand to that bit 
    7.	                                 // && ≡ rvalue reference
 
 
-#### 2.4.Function Call by reference
+### 2.4.Function Call by reference
 
    **void swap(int &x, int &y) {**
    
@@ -281,7 +265,8 @@ The bitwise AND operator (&) compares each bit of the first operand to that bit 
    **return;  }**
 
 
-#### 2.5.Address Of operator
+
+### 2.5.Address Of operator
 
    C++ provides two-pointer operators, which are Address of Operator (&) and Indirection Operator (*).
 
