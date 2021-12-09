@@ -27,7 +27,7 @@ or
 
 ### 1.3.In pointer declarations
 
-*We cannot change the pointer.
+ >*We cannot change the pointer.*
 
 **char *mybuf = 0, *yourbuf;**
    
@@ -37,7 +37,7 @@ or
    
    **aptr = yourbuf;**   // C3892(Error)
 
-*We cannot change the data and also constant data must be assigned to constant pointers.
+ >*We cannot change the data and also constant data must be assigned to constant pointers.*
 
 **const char *mybuf = "test";**
    
@@ -56,10 +56,10 @@ or
 
 
 ### 1.4.const member functions
-Declaring a member function with the const keyword specifies that the function is a
+ >*Declaring a member function with the const keyword specifies that the function is a
 "read-only" function. The const keyword is required in both the declaration and the
  definition. const objects can only access const functions, while const functions can be called
- by both const and not const objects.
+ by both const and not const objects.*
 
 **class Date {**
 
@@ -132,10 +132,10 @@ Declaring a member function with the const keyword specifies that the function i
    
 
 ### 1.6.Const iterators
-Since iterators can also be used to modify the underlying collection.
+ >*Since iterators can also be used to modify the underlying collection.
 when an STL collection is declared const, then any iterators used over the collection 
 must be const iterators. They're just like normal iterators, except that they cannot be
-used to modify the underlying data. (Since iterators are a generalization of the idea of pointers).
+used to modify the underlying data. (Since iterators are a generalization of the idea of pointers).*
 
   std::vector<int>vec;
 
@@ -145,7 +145,7 @@ used to modify the underlying data. (Since iterators are a generalization of the
 
    **vec.push_back( 8 );**
  
-**for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end(); itr != end;++itr )**  **{** // just print out the values...
+**for( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end(); itr != end;++itr )**  **{** // just print out the values...
         
    std::cout<< *itr <<std::endl;
 
@@ -157,8 +157,8 @@ used to modify the underlying data. (Since iterators are a generalization of the
 
 ### 1.7.Const cast
 
-Sometimes, you have a const variable and you want to pass it into a function that you are certain won't modify it. But that function doesn't declare its argument as const.
-Fortunately, if you know that you are safe in passing a const variable into a function that doesn't explicitly indicate that it will not change the data, then you can use a **const_cast** in order to temporarily strip away the const-ness of the object.
+ >*Sometimes, you have a const variable and you want to pass it into a function that you are certain won't modify it. But that function doesn't declare its argument as const.
+Fortunately, if you know that you are safe in passing a const variable into a function that doesn't explicitly indicate that it will not change the data, then you can use a **const_cast** in order to temporarily strip away the const-ness of the object.*
 
 
 // a bad version of strlen that doesn't declare its argument const
@@ -188,7 +188,7 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 # 2.&:
 
 ### 2.1.Bitwise AND
-The bitwise AND operator (&) compares each bit of the first operand to that bit of the second operand. If both bits are 1, the bit is set to 1. Otherwise, the bit is set to 0. Both operands to the bitwise **AND** operator must be of integral types. 
+ >*The bitwise AND operator (&) compares each bit of the first operand to that bit of the second operand. If both bits are 1, the bit is set to 1. Otherwise, the bit is set to 0. Both operands to the bitwise **AND** operator must be of integral types.*
  
 **int main() {**  
   
@@ -264,7 +264,7 @@ The bitwise AND operator (&) compares each bit of the first operand to that bit 
 
 ### 2.5.Address Of operator
 
-   C++ provides two-pointer operators, which are Address of Operator (&) and Indirection Operator (*).
+    >*C++ provides two-pointer operators, which are Address of Operator (&) and Indirection Operator (*).*
 
 **int main () {**
   
