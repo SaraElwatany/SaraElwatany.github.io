@@ -25,7 +25,7 @@ or
 
 
 
-### 1.3.In pointer declarations.
+### 1.3.In pointer declarations
 
 *We cannot change the pointer.
 
@@ -49,7 +49,7 @@ or
   
   **printf_s("%s\n", bptr);**
 
-   **// *bptr = 'a';**   // Error
+   // *bptr = 'a';  // Error
 
 
 
@@ -75,9 +75,7 @@ Declaring a member function with the const keyword specifies that the function i
   
   **int month;  };**
 
-**int Date::getMonth() const**
-
-**{**
+**int Date::getMonth() const  {**
   
   **return month;**        // Doesn't modify anything   **}**
 
@@ -105,10 +103,7 @@ Declaring a member function with the const keyword specifies that the function i
 
 ### 1.5.For const return type and const parameter 
 
-**#include <iostream>**
 
-   **using namespace std;**
- 
 **const int foo(const int y){**
    
    // y = 9; it'll give CTE error as
@@ -142,7 +137,7 @@ when an STL collection is declared const, then any iterators used over the colle
 must be const iterators. They're just like normal iterators, except that they cannot be
 used to modify the underlying data. (Since iterators are a generalization of the idea of pointers).
 
-**std::vector<int> vec;**
+**std::vector<int>vec;**
 
    **vec.push_back( 3 );**
 
@@ -168,7 +163,7 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 
 // a bad version of strlen that doesn't declare its argument const
 
-   **int bad_strlen (char *x) {**
+   int **bad_strlen** (char *x) {
         
 	strlen( x ); }
  
