@@ -103,7 +103,7 @@ Declaring a member function with the const keyword specifies that the function i
 
 
 
-### 1.5.For const return type and const parameter: 
+### 1.5.For const return type and const parameter 
 
 **#include <iostream>**
 
@@ -115,7 +115,7 @@ Declaring a member function with the const keyword specifies that the function i
     
    // y is const var its value can't
     
-   // be change
+   // be changed
     
    **return y;  }**
  
@@ -152,7 +152,7 @@ used to modify the underlying data. (Since iterators are a generalization of the
  
 **for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end(); itr != end;++itr ){** // just print out the values...
         
-   **std::cout<< *itr <<std::endl;**
+   std::cout<< *itr <<std::endl;
 
    **}**
 
@@ -170,7 +170,7 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 
    **int bad_strlen (char *x) {**
         
-	**strlen( x ); }**
+	strlen( x ); }
  
 // note that the extra const is actually implicit in this declaration since
 // string literals are constant
