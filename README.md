@@ -169,16 +169,17 @@ Fortunately, if you know that you are safe in passing a const variable into a fu
 // a bad version of strlen that doesn't declare its argument const
 
    **int bad_strlen (char *x) {**
-        **strlen( x ); }**
+        
+	**strlen( x ); }**
  
 // note that the extra const is actually implicit in this declaration since
 // string literals are constant
 
-	**const char *x = "abc";**
+	const char *x = "abc";
  
 // cast away const-ness for our strlen function 
 
-	**bad_strlen( const_cast<char *>(x) );**
+	bad_strlen( const_cast<char *>(x) );
 
 
 
